@@ -1,0 +1,54 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+.container{
+    margin-top:25px;
+    padding:15px;
+    height: 100%;
+    text-align:center;
+}
+.card{
+    text-align:center;
+    padding:25px;
+}
+.col .card{
+    background-image: url('card.jpg');
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    height:260px;
+    width:175px;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.col .card div{
+    backface-visibility: hidden;
+}
+.card .front {
+    height:150px;
+    width:125px;
+    position: absolute;
+}
+.card .back {
+    height:150px;
+    width:125px;
+    position: absolute;
+    transform: rotateY( 180deg );
+}
+.card.flipped {
+    background-image:none;
+    background-color:white;
+    transform: rotateY( 180deg );
+}
+.card.matched{
+    background-image:none;
+    background-image: linear-gradient(45deg, blue, purple);
+    transform:none;
+    transition:none;
+}
+.modal{
+    text-align: center;
+    background-image: linear-gradient(45deg, blue, purple);
+    color : white;
+}
